@@ -1,0 +1,578 @@
+/* Kickboxing Seite - Energiegeladenes, kampfsportorientiertes Design */
+
+:root {
+    --kick-primary: #c0392b;
+    --kick-secondary: #922b21;
+    --kick-accent: #e74c3c;
+    --kick-light: #f9ebea;
+    --kick-dark: #641e16;
+    --kick-gradient: linear-gradient(135deg, var(--kick-primary), var(--kick-dark));
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    position: relative;
+}
+
+/* Hintergrund-Effekt */
+.martial-arts-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1509563268479-0f004cf3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+/* Navigation anpassen */
+.navbar {
+    background-color: var(--kick-dark);
+}
+
+.navbar a.active {
+    background-color: var(--kick-primary);
+}
+
+/* Header der Kickboxing-Seite */
+.kickboxing-header {
+    background: var(--kick-gradient);
+    padding: 120px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.kickboxing-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1517438505892-eaaf51453420?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.kickboxing-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.kickboxing-title {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+}
+
+.kickboxing-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background-color: white;
+}
+
+.kickboxing-header .subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.header-quote {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-left: 5px solid var(--kick-accent);
+    border-radius: 5px;
+}
+
+.header-quote blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.header-quote cite {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Journey Section */
+.journey-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.journey-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.journey-story p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.journey-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.journey-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(192, 57, 43, 0.5), transparent);
+    z-index: 1;
+}
+
+.journey-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.journey-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Training Section */
+.training-section {
+    padding: 80px 0;
+    background-color: var(--kick-light);
+    position: relative;
+}
+
+.training-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+.training-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.training-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--kick-accent);
+}
+
+.training-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--kick-primary);
+    margin-bottom: 20px;
+}
+
+.training-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--kick-dark);
+}
+
+.weekly-schedule {
+    margin-top: 60px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.weekly-schedule h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--kick-dark);
+    font-size: 1.6rem;
+}
+
+.schedule-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th {
+    background-color: var(--kick-primary);
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.schedule-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.schedule-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Achievements Section */
+.achievements-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.achievements-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.achievement-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--kick-light);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-medal {
+    font-size: 3.5rem;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-medal.gold {
+    color: #ffc107; /* Gold */
+}
+
+.achievement-medal.silver {
+    color: #b0bec5; /* Silver */
+}
+
+.achievement-medal.bronze {
+    color: #cd7f32; /* Bronze */
+}
+
+.achievement-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--kick-dark);
+}
+
+.statistics {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.statistics h3 {
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    color: var(--kick-dark);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-item {
+    width: 150px;
+    padding: 25px 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--kick-primary);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    padding: 80px 0;
+    background-color: var(--kick-light);
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.philosophy-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.philosophy-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.philosophy-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.philosophy-image:hover img {
+    transform: scale(1.05);
+}
+
+.quotes-carousel {
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.quote-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    padding: 30px;
+}
+
+.quote-slide.active {
+    opacity: 1;
+}
+
+.quote-slide blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: center;
+    color: #333;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+}
+
+.control {
+    width: 40px;
+    height: 40px;
+    background-color: var(--kick-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.control:hover {
+    background-color: var(--kick-accent);
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.kickboxing-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.7));
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* CTA Banner für Kickboxing */
+.kickboxing-cta {
+    background: var(--kick-gradient);
+    padding: 60px 0;
+}
+
+.kickboxing-cta::before {
+    background-image: url('https://images.unsplash.com/photo-1547919307-1492efd15f1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+}
+
+.kickboxing-cta .btn {
+    background-color: white;
+    color: var(--kick-primary);
+}
+
+.kickboxing-cta .btn:hover {
+    background-color: var(--kick-accent);
+    color: white;
+}
+
+/* Footer Anpassungen */
+.kickboxing-footer {
+    background-color: var(--kick-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .journey-story,
+    .philosophy-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .journey-image,
+    .philosophy-image {
+        margin-top: 30px;
+    }
+    
+    .kickboxing-title {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .kickboxing-title {
+        font-size: 3rem;
+    }
+    
+    .header-quote blockquote {
+        font-size: 1.2rem;
+    }
+    
+    .achievements-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+} 

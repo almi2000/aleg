@@ -1,0 +1,497 @@
+/* About Seite - Persönliches, professionelles Design */
+
+:root {
+    --about-primary: #27ae60;
+    --about-secondary: #1e8449;
+    --about-accent: #2ecc71;
+    --about-light: #ebf5eb;
+    --about-dark: #145a32;
+    --about-gradient: linear-gradient(135deg, var(--about-primary), var(--about-dark));
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navigation anpassen */
+.navbar {
+    background-color: var(--about-dark);
+}
+
+.navbar a.active {
+    background-color: var(--about-primary);
+}
+
+/* Header-Profil-Bereich */
+.about-header {
+    background: var(--about-gradient);
+    padding: 80px 0;
+    color: white;
+}
+
+.profile-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-content {
+    flex-grow: 1;
+}
+
+.profile-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: white;
+    color: var(--about-primary);
+    transform: translateY(-5px);
+}
+
+/* Bio-Sektion */
+.bio-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.bio-content {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.bio-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.bio-quote {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: var(--about-light);
+    border-left: 5px solid var(--about-primary);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #333;
+    position: relative;
+}
+
+.bio-quote::before {
+    content: """;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    font-size: 5rem;
+    line-height: 1;
+    color: rgba(39, 174, 96, 0.2);
+}
+
+/* Timeline-Sektion */
+.timeline-section {
+    padding: 80px 0;
+    background-color: var(--about-light);
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 40px auto 0;
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    background-color: var(--about-primary);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid var(--about-primary);
+    left: -38px;
+    top: 0;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--about-primary);
+    color: white;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.timeline-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--about-dark);
+}
+
+.timeline-content p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Interessen-Sektion */
+.interests-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.interest-card {
+    background-color: var(--about-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.interest-icon {
+    font-size: 2.5rem;
+    color: var(--about-primary);
+    margin-bottom: 20px;
+}
+
+.interest-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--about-dark);
+}
+
+/* Fakten-Sektion */
+.facts-section {
+    padding: 80px 0;
+    background-color: var(--about-light);
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.fact-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+}
+
+.fact-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--about-primary);
+    margin-bottom: 15px;
+}
+
+.fact-label {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Testimonials-Sektion */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.testimonials-slider {
+    max-width: 800px;
+    margin: 40px auto 0;
+    position: relative;
+    min-height: 300px;
+}
+
+.testimonial-slide {
+    display: none;
+}
+
+.testimonial-slide.active {
+    display: block;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.testimonial-content {
+    background-color: var(--about-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.testimonial-content::before {
+    content: """;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 5rem;
+    line-height: 1;
+    color: rgba(39, 174, 96, 0.2);
+}
+
+.testimonial-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-style: italic;
+    padding-left: 20px;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.author-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--about-dark);
+}
+
+.author-role {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.testimonial-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.control {
+    width: 40px;
+    height: 40px;
+    background-color: var(--about-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control:hover {
+    background-color: var(--about-accent);
+}
+
+.testimonial-dots {
+    display: flex;
+    gap: 10px;
+    margin: 0 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--about-primary);
+}
+
+/* CTA-Banner für die About-Seite */
+.about-cta {
+    background: var(--about-gradient);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.about-cta .cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+}
+
+.about-cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.about-cta .btn {
+    background-color: white;
+    color: var(--about-primary);
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+
+.about-cta .btn:hover {
+    background-color: var(--about-accent);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .profile-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .profile-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline-marker {
+        width: 16px;
+        height: 16px;
+        left: -29px;
+    }
+    
+    .facts-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .testimonial-content p {
+        font-size: 1.1rem;
+    }
+} 
